@@ -12,8 +12,8 @@ This is a FastAPI application that includes a health check endpoint and a router
 1. **Clone the repository:**
 
     ```sh
-    git clone https://github.com/your-username/your-repo-name.git
-    cd your-repo-name
+    git clone https://https://github.com/AndrewCheUA/JuniorTestTask.git
+    cd JuniorTestTask
     ```
 
 2. **Create a virtual environment:**
