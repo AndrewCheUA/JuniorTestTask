@@ -9,16 +9,15 @@ from config import settings
 
 
 
-# Initialize LangChain with a pre-trained summarization model
-llm = HuggingFaceHub(
+
+async def create_summary(user_text: str) -> str:
+    try:
+        # Initialize LangChain with a pre-trained summarization model
+        llm = HuggingFaceHub(
             repo_id=os.getenv("facebook/bart-large-cnn", "facebook/bart-large-cnn"),
             task="summarization",
             huggingfacehub_api_token=settings.huggingfacehub_api_token
         )
-
-
-async def create_summary(user_text: str) -> str:
-    try:
 
         # Define the summarization prompt
         prompt_template = "Please provide a concise summary of the following text:\n{text}"
